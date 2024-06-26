@@ -22,15 +22,15 @@ static void send_mavlink_distance(const uint8_t orientation, const uint16_t dist
 
 
 std::vector<Lidar> lidars{
-    Lidar(6,  0x26, MAV_SENSOR_ROTATION_NONE,   &Wire),
-    Lidar(7,  0x27, MAV_SENSOR_ROTATION_YAW_45, &Wire),
-    Lidar(8,  0x28, MAV_SENSOR_ROTATION_YAW_90, &Wire),
-    Lidar(9,  0x29, MAV_SENSOR_ROTATION_YAW_135, &Wire),
-    Lidar(10, 0x30, MAV_SENSOR_ROTATION_YAW_180, &Wire),
-    Lidar(11, 0x31, MAV_SENSOR_ROTATION_YAW_225, &Wire),
-    Lidar(12, 0x32, MAV_SENSOR_ROTATION_YAW_270, &Wire),
-    Lidar(13, 0x33, MAV_SENSOR_ROTATION_YAW_315, &Wire),
-    Lidar(14, 0x34, MAV_SENSOR_ROTATION_PITCH_90, &Wire),
+    Lidar(6,  0x36, MAV_SENSOR_ROTATION_NONE,   &Wire),
+    Lidar(7,  0x37, MAV_SENSOR_ROTATION_YAW_45, &Wire),
+    Lidar(8,  0x38, MAV_SENSOR_ROTATION_YAW_90, &Wire),
+    Lidar(9,  0x39, MAV_SENSOR_ROTATION_YAW_135, &Wire),
+    Lidar(10, 0x40, MAV_SENSOR_ROTATION_YAW_180, &Wire),
+    Lidar(11, 0x41, MAV_SENSOR_ROTATION_YAW_225, &Wire),
+    Lidar(12, 0x42, MAV_SENSOR_ROTATION_YAW_270, &Wire),
+    Lidar(13, 0x43, MAV_SENSOR_ROTATION_YAW_315, &Wire),
+    Lidar(14, 0x44, MAV_SENSOR_ROTATION_PITCH_90, &Wire),
 };
 
 
