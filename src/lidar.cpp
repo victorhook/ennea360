@@ -1,7 +1,7 @@
 #include "lidar.h"
 
 Lidar::Lidar(const uint8_t enable_pin, const uint8_t i2c_addr, const uint8_t orientation, TwoWire* wire) :
-m_enable_pin(enable_pin),
+enable_pin(enable_pin),
 m_i2c_addr(i2c_addr),
 orientation(orientation),
 m_wire(wire)
@@ -14,14 +14,14 @@ Lidar::~Lidar()
 }
 bool Lidar::init()
 {
-    pinMode(m_enable_pin, INPUT_PULLUP);
-    digitalWrite(m_enable_pin, LOW);
+    pinMode(enable_pin, INPUT_PULLUP);
+    digitalWrite(enable_pin, LOW);
     return true;
 }
 
 bool Lidar::configure()
 {
-    digitalWrite(m_enable_pin, HIGH);
+    digitalWrite(enable_pin, HIGH);
     delay(5);
     m_lidar.begin(m_i2c_addr);
     return true;

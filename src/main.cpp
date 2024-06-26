@@ -106,7 +106,7 @@ void loop()
     for (Lidar& lidar : lidars)
     {
         float distance_cm = lidar.latest_distance() / 10.0;
-        Serial.printf("  %d: %.2f cm\n", lidar.orientation, distance_cm);
+        Serial.printf("  (Pin: %d, ori: %d) %.2f cm\n", lidar.enable_pin, lidar.orientation, distance_cm);
         send_mavlink_distance(lidar.orientation, distance_cm);
     }
     Serial.print("\n");

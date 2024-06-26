@@ -18,9 +18,9 @@ class Lidar
         float latest_distance() const;
         bool dist(float& distance);
         const uint8_t orientation;
+        const uint8_t enable_pin;
 
     private:
-        const uint8_t m_enable_pin;
         const uint8_t m_i2c_addr;
         float m_latest_distance;
         DFRobot_VL53L0X m_lidar;
